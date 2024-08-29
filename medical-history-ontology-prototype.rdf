@@ -1,0 +1,598 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/"
+     xml:base="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:medical-history="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history">
+        <rdfs:comment xml:lang="en">This ontology is used to record the medical history of a patient.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasChiefComplaint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasChiefComplaint">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasChildhoodDisease -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasChildhoodDisease">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasDisease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasDisease -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasDisease">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasFamilyDisease -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasFamilyDisease">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasDisease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasMedicalHistory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasMedicalHistory">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasPastMedicalHistory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasPastMedicalHistory">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasMedicalHistory"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasReviewOfSystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasReviewOfSystem">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#ReviewOfSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasSymptom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasSymptom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#ReviewOfSystem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasAge">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasAllergy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasAllergy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasCurrentMedication -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasCurrentMedication">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasHeight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Disease"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#ReviewOfSystem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasOnset -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasOnset">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasProvocationOrPalliation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasProvocationOrPalliation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasQualityOfPain -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasQualityOfPain">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasRegionAndRadiation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasRegionAndRadiation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasSeverity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasSeverity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasSocialHistory -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasSocialHistory">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasTiming -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasTiming">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasWeight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Disease"/>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasChildhoodDisease"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Disease"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasFamilyDisease"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Disease"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasPastMedicalHistory"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasReviewOfSystem"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#ReviewOfSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasMedicalHistory"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#ReviewOfSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#ReviewOfSystem">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasSymptom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#HeartAttack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#HeartAttack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Disease"/>
+        <medical-history:hasName>Heart Attack</medical-history:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient"/>
+        <medical-history:hasMedicalHistory rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient1MedicalHistory"/>
+        <medical-history:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</medical-history:hasAge>
+        <medical-history:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.61</medical-history:hasHeight>
+        <medical-history:hasId>1</medical-history:hasId>
+        <medical-history:hasName>Jane Doe</medical-history:hasName>
+        <medical-history:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65</medical-history:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient1ChiefSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient1ChiefSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom"/>
+        <medical-history:hasName>Chest pain</medical-history:hasName>
+        <medical-history:hasOnset>4 days ago</medical-history:hasOnset>
+        <medical-history:hasProvocationOrPalliation>worsens with deep inspiration and coughing</medical-history:hasProvocationOrPalliation>
+        <medical-history:hasQualityOfPain>sharp</medical-history:hasQualityOfPain>
+        <medical-history:hasRegionAndRadiation>right side of chest</medical-history:hasRegionAndRadiation>
+        <medical-history:hasSeverity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</medical-history:hasSeverity>
+        <medical-history:hasTiming>constant</medical-history:hasTiming>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient1MedicalHistory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient1MedicalHistory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+        <medical-history:hasChiefComplaint rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient1ChiefSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient"/>
+        <medical-history:hasMedicalHistory rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient2MedicalHistory"/>
+        <medical-history:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</medical-history:hasAge>
+        <medical-history:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.70</medical-history:hasHeight>
+        <medical-history:hasId>2</medical-history:hasId>
+        <medical-history:hasName>John Smith</medical-history:hasName>
+        <medical-history:hasWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75</medical-history:hasWeight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient2ChiefSymptom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient2ChiefSymptom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Symptom"/>
+        <medical-history:hasName>Chest pain</medical-history:hasName>
+        <medical-history:hasOnset>1 hour ago</medical-history:hasOnset>
+        <medical-history:hasProvocationOrPalliation>worsens with physical activity</medical-history:hasProvocationOrPalliation>
+        <medical-history:hasQualityOfPain>severe and crushing</medical-history:hasQualityOfPain>
+        <medical-history:hasRegionAndRadiation>radiates to left arm</medical-history:hasRegionAndRadiation>
+        <medical-history:hasSeverity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</medical-history:hasSeverity>
+        <medical-history:hasTiming>constant</medical-history:hasTiming>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient2MedicalHistory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient2MedicalHistory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+        <medical-history:hasChiefComplaint rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Patient2ChiefSymptom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Pneumonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Pneumonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#Disease"/>
+        <medical-history:hasName>Pneumonia</medical-history:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/mh">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/cc">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/rr">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>Diagnosis</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#MedicalHistory"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/mh"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasChiefComplaint"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/mh"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/cc"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasName"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/cc"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/n"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/n"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>Chest pain</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasRegionAndRadiation"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/cc"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/rr"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                                                                <swrl:arguments>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/rr"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first>radiates to left arm</rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </swrl:arguments>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#hasDisease"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history/mh"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nirav/ontologies/2024/7/medical-history#HeartAttack"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
